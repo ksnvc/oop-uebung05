@@ -1,29 +1,27 @@
 package ueb05;
 
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 class CorpusAnalyzer {
-	private List<String> theses;
+	private List<String> theses = new LinkedList<>();
 
 	CorpusAnalyzer(Iterator<String> thesesIterator) {
-		// TODO Alle Titel in die this.theses Liste übernehmen
+      while(thesesIterator.hasNext())
+      	this.theses.add(thesesIterator.next());
+
 	}
 
 	/**
 	 * Gibt die Anzahl der angefertigten Theses zurück
 	 */
 	int countTheses() {
-		throw new UnsupportedOperationException();
-	}
+		return theses.size();
 
 	/**
 	 * Gibt die durchschnittliche Länge von Titeln in Worten zurück
 	 */
-	int averageThesisTitleLength() {
-		throw new UnsupportedOperationException();
+	int averageThesisTitleLength(){
+		
 	}
 
 	/**
